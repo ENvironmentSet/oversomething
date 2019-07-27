@@ -56,5 +56,17 @@
   },
   "engines": {
     "node": ">=10.9"
+  },
+  "oversomething": {
+    "siteMetadata": {
+      "title": "oversomething",
+      "author": "Jaewon Seo",
+      "description": "Personal Blog starter by Jaewon Seo, who loves computer programming.",
+      "siteUrl": "https://oversomething.netlify.com",
+      "social": {
+        "github": "https://github.com/ENvironmentSet",
+        "twitter": "https://twitter.com/NvironmentE"
+      }
+    }
   }
 }
