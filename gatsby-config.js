@@ -60,7 +60,7 @@ module.exports = {
         background_color: '#212121',
         theme_color: '#FF9800',
         display: 'minimal-ui',
-        icon: 'content/assets/overcurried.png'
+        icon: 'content/assets/icon.ico'
       },
     },
     'gatsby-plugin-offline',
