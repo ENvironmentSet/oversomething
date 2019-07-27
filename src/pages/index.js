@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 import Bio from 'components/molecules/Bio';
 import BaseLayout from 'templates/BaseLayout';
 import SEO from 'templates/SEO';
-import HyperLink from 'components/molecules/HyperLink';
+import HyperLink from 'components/atoms/HyperLink';
 import Row from 'templates/Row';
 import { Text, SmallText, H3Text } from 'components/atoms/Text';
 import Accent from 'components/atoms/Accent';
