@@ -67,7 +67,8 @@
         "github": "https://github.com/ENvironmentSet",
         "twitter": "https://twitter.com/NvironmentE"
       },
-      "something": "？"
+      "something": "？",
+      "useIcon": false
     }
   }
 }
