@@ -15,8 +15,6 @@ import useSiteMetadata from 'utils/useSiteMetadata';
 
 import { graphql } from 'gatsby';
 
-import curry from 'constants/curry';
-
 export default function Index({ data: { allMarkdownRemark: { edges } } }) {
   const posts = edges.map(({ node: { fields, frontmatter } }) => ({ ...fields, ...frontmatter }));
   const { title } = useSiteMetadata();
@@ -42,18 +40,19 @@ export default function Index({ data: { allMarkdownRemark: { edges } } }) {
           <SmallText>{post.date}</SmallText>
         );
       }
-      function PostCurriesPreview() {
-        const curries = parseInt(post.curries);
+      function PostSomethingsPreview() {
+        const somethingAmount = parseInt(post.somethings);
+        const { something } = useSiteMetadata();
 
         return (
-          <SmallText>{curry.repeat(curries)}</SmallText>
+          <SmallText>{something.repeat(somethingAmount)}</SmallText>
         );
       }
 
       return (
         <Row>
           <PostDatePreview />
-          <PostCurriesPreview />
+          <PostSomethingsPreview />
         </Row>
       );
     }
@@ -96,7 +95,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
-            curries
+            somethings
           }
         }
       }

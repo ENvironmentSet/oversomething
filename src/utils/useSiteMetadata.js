@@ -13,6 +13,7 @@ export default function useSiteMetadata() {
             github
             twitter
           }
+          something
         }
       }
     }
