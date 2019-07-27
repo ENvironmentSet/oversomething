@@ -75,5 +75,16 @@ module.exports = {
         pathToConfigModule: 'src/utils/typography',
       },
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [
+          {
+            userAgent: '*',
+            allow: '/',
+          }
+        ],
+      },
+    },
   ],
 };
