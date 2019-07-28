@@ -14,6 +14,7 @@ export default function useSiteMetadata() {
             twitter
           }
           something
+          theme
         }
       }
     }
