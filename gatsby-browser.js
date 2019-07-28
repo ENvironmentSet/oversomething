@@ -6,7 +6,7 @@ import React from 'react';
 
 import AppEnvironment from 'templates/AppEnvironment';
 
-export function wrapRootElement({ element }) {
+export function wrapPageElement({ element }) {
   return (
     <AppEnvironment>
       {element}
