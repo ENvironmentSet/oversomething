@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 
-import { textColor } from 'constants/palette';
+import { pickColor } from 'constants/themes';
 
 export const Text = styled.p`
-  color: ${textColor};
+  color: ${pickColor('foreground')};
 `;
 export default Text;
 export const H1Text = Text.withComponent('h1');

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
-import { accentColor } from 'constants/palette';
+import { pickColor } from 'constants/themes';
 
 export default styled.strong`
-  color: ${accentColor};
+  color: ${pickColor('accent')};
 `;
