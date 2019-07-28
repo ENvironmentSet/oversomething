@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 
-import { textColor } from 'constants/palette';
+import { pickColor } from 'constants/themes';
 
 export default styled.hr`
-  background-color: ${textColor};
+  background-color: ${pickColor('foreground')};
 `;
