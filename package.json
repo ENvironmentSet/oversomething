@@ -11,6 +11,7 @@
     "@emotion/core": "^10.0.14",
     "@emotion/styled": "^10.0.14",
     "cosmiconfig": "^5.2.1",
+    "emotion-theming": "^10.0.14",
     "gatsby": "^2.13.41",
     "gatsby-image": "^2.2.7",
     "gatsby-plugin-google-analytics": "^2.1.4",
@@ -67,7 +68,8 @@
         "github": "https://github.com/ENvironmentSet",
         "twitter": "https://twitter.com/NvironmentE"
       },
-      "something": "？"
+      "something": "？",
+      "theme": "github"
     },
     "useIcon": false
   }
