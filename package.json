@@ -2,7 +2,7 @@
   "name": "oversomething",
   "private": true,
   "description": "oversomething is modernized Gatsby starter blog",
-  "version": "0.0.0",
+  "version": "0.0.1-alpha.1",
   "author": "Jaewon Seo <herryseo1@gmail.com>",
   "bugs": {
     "url": "https://github.com/ENvironmentSet/oversomething/issues"
