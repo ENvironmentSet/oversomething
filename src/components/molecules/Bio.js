@@ -23,7 +23,7 @@ export default function Bio() {
       }
     }
   `);
-  const { author } = useSiteMetadata();
+  const { author, description } = useSiteMetadata();
   const BioDiv = useConstant(() => styled.div`
     display: flex;
     margin-bottom: ${rhythm(1)};
@@ -45,7 +45,7 @@ export default function Bio() {
       <Text>
         Personal blog of <Accent>{author}</Accent>.
         <br />
-        I believe that knowledge becomes valuable when we share it with others.
+        {description}
       </Text>
     );
   }
