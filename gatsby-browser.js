@@ -4,7 +4,7 @@ import 'prismjs/themes/prism-okaidia.css';
 
 import React from 'react';
 
-import AppEnvironment from 'templates/AppEnvironment';
+import AppEnvironment from 'components/templates/AppEnvironment';
 
 export function wrapPageElement({ element }) {
   return (
