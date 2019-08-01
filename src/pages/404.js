@@ -1,7 +1,7 @@
 import React from 'react';
 
-import SEO from 'templates/SEO';
-import BaseLayout from 'templates/BaseLayout';
+import SEO from 'components/templates/SEO';
+import BaseLayout from 'components/templates/BaseLayout';
 import HyperLink from 'components/atoms/HyperLink';
 import { Text, H1Text } from 'components/atoms/Text';
 import Accent from 'components/atoms/Accent';

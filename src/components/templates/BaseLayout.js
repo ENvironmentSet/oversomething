@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 import HyperLink from 'components/atoms/HyperLink';
-import Row from 'templates/Row';
+import Row from 'components/templates/Row';
 import Accent from 'components/atoms/Accent';
 import { H1Text } from 'components/atoms/Text';
 

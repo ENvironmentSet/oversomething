@@ -2,10 +2,10 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 import Bio from 'components/molecules/Bio';
-import BaseLayout from 'templates/BaseLayout';
-import SEO from 'templates/SEO';
+import BaseLayout from 'components/templates/BaseLayout';
+import SEO from 'components/templates/SEO';
 import HyperLink from 'components/atoms/HyperLink';
-import Row from 'templates/Row';
+import Row from 'components/templates/Row';
 import { Text, SmallText, H3Text } from 'components/atoms/Text';
 import Accent from 'components/atoms/Accent';
 

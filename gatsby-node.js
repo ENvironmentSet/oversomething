@@ -2,7 +2,7 @@ const path = require('path');
 const { createFilePath } = require('gatsby-source-filesystem');
 
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
-  const Post = path.resolve('./src/templates/Post.js');
+  const Post = path.resolve('./src/components/templates/Post.js');
   const result = await graphql(
     `
       {
