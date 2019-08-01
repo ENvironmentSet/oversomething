@@ -1,21 +1,21 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import { hyperLinkColor, textColor, accentColor } from 'constants/palette';
+import { pickColor } from 'constants/themes';
 
 export default function Markdown({ children }) {
   const MarkdownContainer = styled.div`
       a {
-        color: ${hyperLinkColor};
+        color: ${pickColor('hyperLink')};
       }
       p, span, small, h1, h2, h3, h4, h5, h6 {
-        color: ${textColor};
+        color: ${pickColor('foreground')};
       }
       strong {
-        color: ${accentColor}
+        color: ${pickColor('accent')}
       }
       hr {
-        background-color: ${textColor};
+        background-color: ${pickColor('foreground')};
       }
   `;
 

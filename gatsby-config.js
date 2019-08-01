@@ -1,14 +1,11 @@
+const cosmiconfig = require('cosmiconfig');
+const explorer = cosmiconfig('oversomething');
+const { config: { siteMetadata, ...config } } = explorer.searchSync(__dirname);
+
+if (!config) throw new Error('Can\'t find site config');
+
 module.exports = {
-  siteMetadata: {
-    title: 'overcurried',
-    author: 'Jaewon Seo',
-    description: 'Personal Blog of Jaewon Seo, who loves computer programming.',
-    siteUrl: 'https://overcurried.netlify.com',
-    social: {
-      github: 'https://github.com/ENvironmentSet',
-      twitter: 'https://twitter.com/NvironmentE',
-    }
-  },
+  siteMetadata,
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',
@@ -51,20 +48,19 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: 'UA-131792068-2',
+        trackingId: config.gaTrackingId || '',
       },
     },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'overcurried',
-        short_name: 'overcurried',
-        description: 'Personal Blog of ENvironmentSet',
+        name: siteMetadata.title,
+        description: siteMetadata.description,
         start_url: '/',
         background_color: '#212121',
         theme_color: '#FF9800',
         display: 'minimal-ui',
-        icon: 'content/assets/overcurried.png'
+        [config.useIcon && 'icon']: 'content/assets/icon.ico'
       },
     },
     'gatsby-plugin-offline',
@@ -75,5 +71,17 @@ module.exports = {
         pathToConfigModule: 'src/utils/typography',
       },
     },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [
+          {
+            userAgent: '*',
+            allow: '/',
+          }
+        ],
+      },
+    },
+    'gatsby-plugin-sitemap',
   ],
 };

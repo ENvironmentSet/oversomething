@@ -3,13 +3,13 @@ import styled from '@emotion/styled';
 
 import { Link as GatsbyLink } from 'gatsby';
 
-import { hyperLinkColor } from 'constants/palette'
+import { pickColor } from 'constants/themes';
 
 export default function HyperLink({ to, children }) {
   const LinkStyle = styled.div`
      box-shadow: none;
      text-decoration: none;
-     color: ${hyperLinkColor};
+     color: ${pickColor('hyperLink')};
    `;
   function isInternalLink(link) {
     const regexp = /^\/(?!\/)/;

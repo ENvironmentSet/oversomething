@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-import HyperLink from 'components/molecules/HyperLink';
+import HyperLink from 'components/atoms/HyperLink';
 import Bio from 'components/molecules/Bio';
 import SEO from 'templates/SEO';
 import BaseLayout from 'templates/BaseLayout';
@@ -10,11 +10,11 @@ import Row from 'templates/Row';
 import { Text, H1Text } from 'components/atoms/Text';
 
 import useConstant from 'utils/useConstant';
+import useSiteMetadata from 'utils/useSiteMetadata';
 
 import { rhythm, scale } from 'utils/typography';
 import { graphql } from 'gatsby';
 
-import curry from 'constants/curry';
 import ThematicBreak from 'components/atoms/ThematicBreak';
 
 export default function Post(
@@ -26,7 +26,7 @@ export default function Post(
             title,
             date,
             description,
-            curries
+            somethings,
           }
         }
     },
@@ -46,9 +46,12 @@ export default function Post(
         margin-bottom: ${rhythm(1)};
         ${scale(-1/5)};
       `);
-      function PostCurries() {
+      function PostSomethings() {
+        const somethingAmount = parseInt(somethings);
+        const { something } = useSiteMetadata();
+
         return (
-          <Text>{curry.repeat(parseInt(curries))}</Text>
+          <Text>{something.repeat(somethingAmount)}</Text>
         );
       }
 
@@ -57,7 +60,7 @@ export default function Post(
           <PostDate>
             {date}
           </PostDate>
-          <PostCurries />
+          <PostSomethings />
         </Row>
       );
     }
@@ -149,7 +152,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
-        curries
+        somethings
       }
     }
   }
