@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import media from 'css-in-js-media';
 
 import Image from 'gatsby-image';
 import Text from 'components/atoms/Text';
@@ -25,10 +26,11 @@ export default function Bio() {
   `);
   const { author, description } = useSiteMetadata();
   const BioDiv = useConstant(() => styled.div`
-    display: flex;
-    margin-bottom: ${rhythm(1)};
-    @media (min-width: 420px) {
-      margin-bottom: ${rhythm(2.5)};
+    margin-bottom: ${rhythm(2.5)};
+
+    ${media('<=phone')} {
+      display: flex;
+      margin-bottom: ${rhythm(1)};
     }
   `);
   const ProfileImage = useConstant(() => styled(Image)`

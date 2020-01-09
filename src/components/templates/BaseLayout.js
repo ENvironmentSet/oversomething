@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import media from 'css-in-js-media';
 
 import HyperLink from 'components/atoms/HyperLink';
 import Row from 'components/templates/Row';
@@ -25,11 +26,12 @@ export default function BaseLayout({ children }) {
     const { title } = useSiteMetadata();
     const SiteTitle = useConstant(() => styled(H1Text)`
       margin-top: 0;
-      margin-bottom: ${rhythm(1.0)};
-      ${scale(1)};
-      @media (min-width: 420px) {
-        margin-bottom: ${rhythm(1.5)};
-        ${scale(1.5)};
+      margin-bottom: ${rhythm(1.5)};
+      ${scale(1.5)};
+
+      ${media('<=phone')} {
+        margin-bottom: ${rhythm(1.0)};
+        ${scale(1)};
       }
     `);
 
