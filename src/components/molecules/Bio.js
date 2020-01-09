@@ -26,10 +26,11 @@ export default function Bio() {
   `);
   const { author, description } = useSiteMetadata();
   const BioDiv = useConstant(() => styled.div`
-    display: flex;
-    margin-bottom: ${rhythm(1)};
+    margin-bottom: ${rhythm(2.5)};
+
     ${media('<=phone')} {
-      margin-bottom: ${rhythm(2.5)};
+      display: flex;
+      margin-bottom: ${rhythm(1)};
     }
   `);
   const ProfileImage = useConstant(() => styled(Image)`

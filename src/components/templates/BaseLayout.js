@@ -26,11 +26,12 @@ export default function BaseLayout({ children }) {
     const { title } = useSiteMetadata();
     const SiteTitle = useConstant(() => styled(H1Text)`
       margin-top: 0;
-      margin-bottom: ${rhythm(1.0)};
-      ${scale(1)};
+      margin-bottom: ${rhythm(1.5)};
+      ${scale(1.5)};
+
       ${media('<=phone')} {
-        margin-bottom: ${rhythm(1.5)};
-        ${scale(1.5)};
+        margin-bottom: ${rhythm(1.0)};
+        ${scale(1)};
       }
     `);
 
