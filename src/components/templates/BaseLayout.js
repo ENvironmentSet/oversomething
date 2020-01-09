@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import media from 'css-in-js-media';
 
 import HyperLink from 'components/atoms/HyperLink';
 import Row from 'components/templates/Row';
@@ -27,7 +28,7 @@ export default function BaseLayout({ children }) {
       margin-top: 0;
       margin-bottom: ${rhythm(1.0)};
       ${scale(1)};
-      @media (min-width: 420px) {
+      ${media('<=phone')} {
         margin-bottom: ${rhythm(1.5)};
         ${scale(1.5)};
       }
